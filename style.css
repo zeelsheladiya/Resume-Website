@@ -1,0 +1,164 @@
+@import url("https://use.typekit.net/ceo4tiy.css");
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+:root {
+  --dark-bg: rgba(15, 15, 15, 0.95);
+  --spacing: 350px;
+
+  font-family: filicudi-solid, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+main {
+  width: 100vw;
+  color: white;
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  margin: 0px auto;
+  padding: 120px 0px;
+  
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+h1, h2, h3, blockquote {
+  font-family: utopia-std-headline, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+.forcenter{
+    text-align: center;
+}
+
+
+  header {
+    background: var(--dark-bg);
+    grid-column: 2 / span 5;
+    font-size: 2.5rem;
+    padding: 2rem;
+    border-radius: 5rem;
+    margin-bottom: var(--spacing);
+  }
+
+  section {
+    grid-column: 2 / 8;
+    padding: 1rem;
+    background: var(--dark-bg);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: var(--spacing);
+  }
+
+  blockquote {
+    margin: 2rem;
+    padding: 0;
+    grid-column: 2 / span 9;
+    margin-bottom: var(--spacing);
+  }
+
+  blockquote p {
+    color: black;
+    background-color: white;
+    font-size: 4rem;
+    display: inline;
+    line-height: 1;
+  }
+
+  blockquote p a {
+    color: black;
+    background-color: white;
+    font-size: 4rem;
+    display: inline;
+    line-height: 1;
+    text-decoration: none;
+    padding: 2rem;
+  }
+
+  .left {
+    grid-column: 6 / 12;
+  }
+
+  :root {
+    --three-dimensions-card-left-side-width: 1rem;
+}
+
+.three-dimensions-card {
+    position: relative;
+}
+
+/* The left side */
+.three-dimensions-card::before { 
+    background: rgba(0, 0, 0, 0.3);
+    content: '';
+    
+    /* Position */
+    top: var(--three-dimensions-card-left-side-width);
+    left: 0px;
+    position: absolute;
+    transform: translate(-100%, 0) skewY(-45deg);
+    transform-origin: left top;
+
+    /* Size */
+    height: 100%;
+    width: var(--three-dimensions-card-left-side-width);
+}
+
+/* The bottom side */
+.three-dimensions-card::after {
+    background: rgba(0, 0, 0, 0.3);
+    content: '';    
+    
+    /* Position */
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    transform: translate(0, 100%) skewX(-45deg);
+    transform-origin: left top;
+
+    /* Size */
+    height: var(--three-dimensions-card-left-side-width);
+    width: 100%;
+}
+
+.layered-card {
+    position: relative;
+}
+
+.layered-card::before {
+    background: rgba(0, 0, 0, 0.3);
+    content: '';
+    
+    /* Position */
+    top: 0;
+    left: 0;
+    position: absolute;
+    transform: translate(1rem, 1rem);
+
+    /* Size */
+    height: 100%;
+    width: 100%;
+
+    /* Display under the main content */
+    z-index: -1;
+}
+
+.linkline{
+  text-decoration: none;
+}
